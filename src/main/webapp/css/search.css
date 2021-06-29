@@ -1,21 +1,28 @@
 .search_textinput {
 	width      : 30pc;
-	height     : 40px;
-	border     : 4px solid rgba(0, 128, 0, 0.75);
+	height     : 50px;
+	border     : 4px solid rgba(48, 110, 183, 0.75);
 	float      : left;
 	outline    : none;
 	text-indent: 16px;
+	font-size  : 16px;
+}
+
+.search_textinput:hover {
+	border: 4px solid rgba(48, 110, 183, 1);
 }
 
 .search_button {
 	width     : 100px;
 	height    : 50px;
-	background: rgba(0, 128, 0, 0.75);
+	background: rgba(48, 110, 183, 0.75);
+	border    : 0px;
+	float     : left;
+	color     : white;
+	cursor    : pointer;
+}
 
-	border: 0px;
-	/*改成右浮动也是可以的*/
-	float : left;
-	color : white;
-	/*搜索的字体颜色为白色*/
-	cursor: pointer;
+.search_button:hover {
+	background: rgba(48, 110, 183, 0.5);
+	color     : black;
 }

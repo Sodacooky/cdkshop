@@ -1,15 +1,12 @@
 /*ul*/
 
 .navigator_list {
-	margin    : 0px auto;
-	/*框框整体的位置，30px是指离网页的顶部和下部的距离，auto控制的是左右距离为自动调节*/
-	width     : 100pc;
-	/*框框的宽度*/
-	height    : 100pc;
-	/*框框的长度*/
-	padding   : 0px;
-	/*将框框的padding设置为零，不然会导致框框里的内容与框边缘有间隔*/
-	list-style: none;
+	margin-left : 10pc;
+	margin-right: 10pc;
+	width       : 100pc;
+	height      : 128px;
+	padding     : 0px;
+	list-style  : none;
 }
 
 /*li*/
@@ -31,15 +28,15 @@
 /*a*/
 
 .navigator_block {
+	cursor          : pointer;
 	display         : block;
 	/*将a变成块状*/
 	width           : 300px;
 	height          : 50px;
 	/*设置块的长度*/
-	font-family     : Microsoft Yahei;
 	line-height     : 50px;
 	/*设置字体在块中的高度*/
-	background-color: rgba(0, 128, 0, 0.75);
+	background-color: rgba(48, 110, 183, 0.75);
 	margin          : 0px 0px;
 	/*块里的高宽通过margin设置*/
 	color           : white;
@@ -51,7 +48,9 @@
 }
 
 .navigator_block:hover {
-	background-color: yellowgreen;
+	background-color: rgba(48, 110, 183, 0.5);
+	text-decoration : none;
+	color           : black;
 }
 
 .navigator_category {
