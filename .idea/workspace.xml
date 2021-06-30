@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="808d974c-5996-46c1-8e05-a03754c3edc6" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/购物车.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdkshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cdkshop.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +49,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
@@ -72,7 +71,7 @@
       <updated>1624873639362</updated>
       <workItem from="1624873644916" duration="125000" />
       <workItem from="1624969535208" duration="3636000" />
-      <workItem from="1625029164787" duration="4100000" />
+      <workItem from="1625029164787" duration="8352000" />
     </task>
     <servers />
   </component>
@@ -92,6 +91,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="402" y="69" key="#项目结构" timestamp="1625051947811">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="402" y="69" key="#项目结构/0.0.1440.920@0.0.1440.920" timestamp="1625051947811" />
     <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1625042688475">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
