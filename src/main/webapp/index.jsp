@@ -30,7 +30,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="#">首页</a></li>
-					<li><a href="#">我的购物车</a></li>
+					<li><a href="购物车.html">我的购物车</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">分类<span class="caret"></span></a>
@@ -68,7 +68,6 @@
                         <h3>东方虹龙洞</h3>
                         <p style="margin: 0px;">
                             <span class="price_text">￥50</span>
-                            <span class="label label-default">库存: 100</span>
                         </p>
                         <form>
                             <div class="form-group">
