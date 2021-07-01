@@ -2,5 +2,8 @@
 .vscode/
 .settings/
 
+#idea
+.idea
+
 # build
 target/
