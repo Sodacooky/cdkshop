@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" alt="蒸汽平台精神续作——电气平台">Electricity</a>
+            <a class="navbar-brand">Electricity</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -79,7 +79,7 @@
                 <div class="caption">
                     <h3><%= g.strShortName %>
                     </h3>
-                    <p style="margin: 0px;">
+                    <p style="margin: 0;">
                         <span class="price_text">￥<%= g.nPrice %></span>
                         <span class="label label-default">库存: <%= g.nAmount %></span>
                     <form>
