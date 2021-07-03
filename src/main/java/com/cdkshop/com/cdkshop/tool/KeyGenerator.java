@@ -22,7 +22,7 @@ import java.util.List;
         }
     }
 
-    //添加随机条
+    //添加随机条`
     private void __addSomeTo(String game_id, Connection con) {
         try {
             PreparedStatement stm = con.prepareStatement("insert into stock values(?,?);");
