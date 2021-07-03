@@ -17,10 +17,10 @@ public class GameSearcher {
 		// val设为%即可列出全部
 		public static List<Game> search(String val, String col, int page, Connection con) throws SQLException {
 				// do query
-				PreparedStatement stm = con.prepareStatement("select * from game_info where ? like '%?%' limit ?,4;");
-				stm.setString(1, col);
-				stm.setString(2, val);
-				stm.setInt(3, page * 8);
+				String sql = "select * from game_info where " + col + " like ? order by id desc limit ?,4;";
+				PreparedStatement stm = con.prepareStatement(sql);
+				stm.setString(1, "%" + val + "%");
+				stm.setInt(2, page * 4);
 				ResultSet result = stm.executeQuery();
 				// assign
 				List<Game> list_game = new ArrayList<Game>();
@@ -36,20 +36,18 @@ public class GameSearcher {
 
 		public static int searchPageAmount(String val, String col, Connection con) throws SQLException {
 				// do query
-				PreparedStatement stm = con.prepareStatement("select count(id) from game_info where ? like '%?%';");
-				stm.setString(1, col);
-				stm.setString(2, val);
+				String sql = "select count(id) from game_info where " + col + " like ?;";
+				PreparedStatement stm = con.prepareStatement(sql);
+				stm.setString(1, "%" + val + "%");
 				ResultSet result = stm.executeQuery();
 				int game_amount = 0;
 				if (result.next()) {
-						game_amount = result.getInt(0);
+						game_amount = result.getInt(1);
 				}
 				stm.close();
 
 				int page_amount = 0;
-				if (game_amount <= 0) {
-						page_amount = 0;
-				} else {
+				if (game_amount > 0) {
 						page_amount = game_amount / 4;
 						if (game_amount % 4 != 0) {
 								page_amount++;

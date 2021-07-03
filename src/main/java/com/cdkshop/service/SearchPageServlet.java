@@ -14,47 +14,37 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/CategoryPage") public class CategoryPage extends HttpServlet {
+@WebServlet("/SearchPageServlet") public class SearchPageServlet extends HttpServlet {
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-				//get application param
+				//get param
 				Connection con = (Connection) req.getServletContext().getAttribute("connect");
-
-				//get url param map
 				Map<String, String[]> param = req.getParameterMap();
-				//get category name
-				String category_name = "未分类";
-				if (param.containsKey("category")) {
-						category_name = param.get("category")[0];
-				} else {
-						req.getRequestDispatcher("Error.jsp").forward(req, resp);
+				String search_content = "null";
+				if (param.containsKey("search")) {
+						search_content = param.get("search")[0];
 				}
-				//get goal page
-				int page = 0;
+				int now_page = 1;
 				if (param.containsKey("page")) {
-						page = Integer.parseInt(param.get("page")[0]);
+						now_page = Integer.parseInt(param.get("page")[0]);
 				}
-
-				//fetch game
-				List<Game> list_game = null;
+				//query
 				int page_amount = 0;
+				List<Game> list_game = null;
 				try {
-						page_amount = GameSearcher.searchPageAmount(category_name, "category", con);
-						if (page_amount > 0) {
-								list_game = GameSearcher.search(category_name, "category", page, con);
-						}
+						page_amount = GameSearcher.searchPageAmount(search_content, "name", con);
+						list_game = GameSearcher.search(search_content, "name", now_page - 1, con);
 				} catch (SQLException e) {
 						e.printStackTrace();
 				}
-
 				//store
 				req.setAttribute("list_game", list_game);
-				req.setAttribute("now_page", (Integer) page);
+				req.setAttribute("now_page", (Integer) now_page);
 				req.setAttribute("page_amount", (Integer) page_amount);
+				req.setAttribute("now_search", search_content);
 				//message
-				req.setAttribute("message_title", "正在浏览分类 " + param.get("category")[0]);
-				req.setAttribute("message_content", "");
-
+				req.setAttribute("message_title", search_content + " 的搜索结果");
+				req.setAttribute("message_content", "共有" + page_amount + "页结果，当前浏览第" + now_page + "页");
 				//forward
-				req.getRequestDispatcher("GameDisplay.jsp").forward(req, resp);
+				req.getRequestDispatcher("CategoryPage.jsp").forward(req, resp);
 		}
 }

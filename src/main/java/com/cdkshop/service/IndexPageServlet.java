@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
-@WebServlet("/IndexPage") public class IndexPage extends HttpServlet {
+@WebServlet("/IndexPageServlet") public class IndexPageServlet extends HttpServlet {
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 				//fetch game
 				Connection con = (Connection) req.getServletContext().getAttribute("connect");
@@ -20,6 +20,6 @@ import java.util.List;
 				//store game list
 				req.setAttribute("list_game", list_game);
 				//forward
-				req.getRequestDispatcher("GameDisplay.jsp").forward(req, resp);
+				req.getRequestDispatcher("IndexPage.jsp").forward(req, resp);
 		}
 }

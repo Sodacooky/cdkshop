@@ -5,14 +5,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Electricity CDK商城</title>
+    <title>Electricity CDK商城 搜索</title>
     <!-- JQuery, Bootstrap-->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- 首页所用样式表 -->
-    <link href="css/index_page.css" rel="stylesheet">
 </head>
 
 <!-- JSP Parameter -->
@@ -27,17 +25,17 @@
     if (request.getAttribute("now_page") != null) {
         now_page = (Integer) request.getAttribute("now_page");
     }
-    String message_title = "欢迎来到Electricity！";
+    String message_title = "";
     if (request.getAttribute("message_title") != null) {
         message_title = (String) request.getAttribute("message_title");
     }
-    String message_content = "在这里你可以买到超低价的游戏激活CDK！看看下面这些最新上架的游戏吧！";
+    String message_content = "";
     if (request.getAttribute("message_content") != null) {
-        message_content = (String) request.getAttribute("now_page");
+        message_content = (String) request.getAttribute("message_content");
     }
-    String now_query = "%";
-    if (request.getAttribute("now_query") != null) {
-        now_query = (String) request.getAttribute("now_query");
+    String now_search = "null";
+    if (request.getAttribute("now_search") != null) {
+        now_search = (String) request.getAttribute("now_search");
     }
     List<Game> list_game = null;
     if (request.getAttribute("list_game") != null) {
@@ -47,6 +45,7 @@
 
 
 <body>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -62,24 +61,26 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">我的购物车</a></li>
+                <li><a href="index.jsp">首页</a></li>
+                <li><a href="CartPage">我的购物车</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-haspopup="true"
                        aria-expanded="false">分类<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <!--后序加入游戏分类-->
-                        <li><a href="CategoryPage/category=射击&page=1">射击</a></li>
-                        <li><a href="CategoryPage/category=射击&page=1"></a></li>
-                        <li><a href="CategoryPage/category=射击&page=1"></a></li>
+                        <li><a href="CategoryPageServlet?category=射击&page=1">射击</a></li>
+                        <li><a href="CategoryPageServlet?category=竞速&page=1">竞速</a></li>
+                        <li><a href="CategoryPageServlet?category=角色扮演&page=1">角色扮演</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="CategoryPageServlet?category=未分类&page=1">未分类</a></li>
                     </ul>
                 </li>
             </ul>
             <!--查询Servlet-->
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" action="SearchPageServlet" method="get">
                 <div class="form-group">
-                    <input type="text" name="category_search" placeholder="在这里输入要搜索的内容"
+                    <input type="text" name="search" placeholder="在这里输入要搜索的内容"
                            class="form-control">
                 </div>
                 <button type="submit" class="btn btn-success">搜索</button>
@@ -87,7 +88,6 @@
         </div>
     </div>
 </nav>
-
 
 <div style="height: 64px"></div>
 
@@ -107,7 +107,8 @@
     <!-- Game List From JSP -->
     <div class="row">
         <%
-            for (Game g : list_game) {
+            if (list_game != null) {
+                for (Game g : list_game) {
         %>
         <div class="col-md-3">
             <div class="thumbnail">
@@ -137,7 +138,8 @@
             </div>
         </div>
         <%
-            }
+                } //end for
+            } //end if
         %>
     </div><!-- end row -->
 
@@ -147,23 +149,28 @@
             <%
                 if (now_page > 1) {
             %>
-            <li class="previous"><a href="CategoryPage?category=<%=now_query%>&page=<%=now_page-1%>"><span
+            <li class="previous"><a href="SearchPageServlet?search=<%=now_search%>&page=<%=now_page-1%>"><span
                     aria-hidden="true">&larr;</span>
                 上一页</a></li>
             <% } else { %>
-            <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+            <li class="previous disabled"><a><span aria-hidden="true">&larr;</span> 上一页</a></li>
             <% } %>
 
-            <% if (now_page + 1 > page_amount) { %>
-            <li class="next"><a href="CategoryPage?category=<%=now_query%>&page=<%=now_page+1%>"> 下一页<span
+            <% if (now_page + 1 < page_amount) { %>
+            <li class="next"><a href="SearchPageServlet?search=<%=now_search%>&page=<%=now_page+1%>"> 下一页<span
                     aria-hidden="true">&rarr;</span></a></li>
             <% } else { %>
-            <li class="next disabled"><a href="#"> 下一页<span aria-hidden="true">&rarr;</span></a></li>
+            <li class="next disabled"><a> 下一页<span aria-hidden="true">&rarr;</span></a></li>
             <% } %>
         </ul>
     </nav>
 
 </div><!-- end container -->
+
+
+<hr>
+<p style="text-align: center">Electricity Team, 2021</p>
+<p style="text-align: center"><a href="">网站后台</a></p>
 
 
 </body>
