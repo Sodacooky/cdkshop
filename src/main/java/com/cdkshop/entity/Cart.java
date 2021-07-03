@@ -15,3 +15,4 @@ public class Cart {
 		//game_id -> amount
 		Map<String, Integer> m_mapContent;
 }
+

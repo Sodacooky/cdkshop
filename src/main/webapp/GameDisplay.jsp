@@ -89,6 +89,8 @@
 </nav>
 
 
+<div style="height: 64px"></div>
+
 <div class="container">
 
     <!-- Message From JSP -->
@@ -100,6 +102,7 @@
             <%= message_content %>
         </p>
     </div>
+
 
     <!-- Game List From JSP -->
     <div class="row">
