@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="cdkshop:war" />
+      <artifact name="cdkshop:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="808d974c-5996-46c1-8e05-a03754c3edc6" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdkshop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdkshop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdkshop/db/GameSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdkshop/db/GameSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdkshop/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdkshop/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/购物车.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/购物车.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1uZWYagSI23noqbqatD0ASNoDdL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cdkshop_stock.csv" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\cdkshop\src\main\webapp\resources\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\cdkshop\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_cdkshop" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51020" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9." type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="cdkshop:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/cdkshop_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_37_cdkshop" />
+        <option name="DEPLOY_TOMCAT_APPS" value="true" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50767" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="cdkshop:war" />
+          <artifact name="cdkshop:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="cdkshop:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/cdkshop_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_cdkshop_2" />
+        <option name="DEPLOY_TOMCAT_APPS" value="true" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50767" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="cdkshop:war" />
+          <artifact name="cdkshop:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="808d974c-5996-46c1-8e05-a03754c3edc6" name="默认的" comment="" />
+      <created>1624873639362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624873639362</updated>
+      <workItem from="1624873644916" duration="125000" />
+      <workItem from="1624969535208" duration="3636000" />
+      <workItem from="1625029164787" duration="8352000" />
+      <workItem from="1625117013916" duration="428000" />
+      <workItem from="1625117586537" duration="350000" />
+      <workItem from="1625118506256" duration="6845000" />
+      <workItem from="1625146270857" duration="4618000" />
+      <workItem from="1625151706440" duration="1412000" />
+      <workItem from="1625154692958" duration="652000" />
+      <workItem from="1625232916052" duration="2109000" />
+      <workItem from="1625276819982" duration="3911000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="604" y="322" key="#Notifications" timestamp="1625148141557">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="604" y="322" key="#Notifications/0.0.1440.920@0.0.1440.920" timestamp="1625148141557" />
+    <state x="497" y="337" key="#Tomcat_Server" timestamp="1625117061043">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="497" y="337" key="#Tomcat_Server/0.0.1440.920@0.0.1440.920" timestamp="1625117061043" />
+    <state x="544" y="246" key="#Web浏览器" timestamp="1625152727370">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="544" y="246" key="#Web浏览器/0.0.1440.920@0.0.1440.920" timestamp="1625152727370" />
+    <state x="176" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625146867622">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="176" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1625146867622" />
+    <state x="451" y="98" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1625117111501">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="451" y="98" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1440.920@0.0.1440.920" timestamp="1625117111501" />
+    <state x="408" y="301" key="#模板语言" timestamp="1625233453986">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="408" y="301" key="#模板语言/0.0.1440.920@0.0.1440.920" timestamp="1625233453986" />
+    <state x="402" y="69" key="#项目结构" timestamp="1625051947811">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="402" y="69" key="#项目结构/0.0.1440.920@0.0.1440.920" timestamp="1625051947811" />
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1625148050815">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1625148050815" />
+    <state width="957" height="286" key="GridCell.Tab.0.bottom" timestamp="1625280603213">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1625280603213" />
+    <state width="957" height="286" key="GridCell.Tab.0.center" timestamp="1625280603213">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1625280603213" />
+    <state width="957" height="286" key="GridCell.Tab.0.left" timestamp="1625280603213">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1625280603213" />
+    <state width="957" height="286" key="GridCell.Tab.0.right" timestamp="1625280603213">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1625280603213" />
+    <state width="957" height="286" key="GridCell.Tab.1.bottom" timestamp="1625280603156">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1625280603156" />
+    <state width="957" height="286" key="GridCell.Tab.1.center" timestamp="1625280603156">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1625280603156" />
+    <state width="957" height="286" key="GridCell.Tab.1.left" timestamp="1625280603156">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1625280603156" />
+    <state width="957" height="286" key="GridCell.Tab.1.right" timestamp="1625280603156">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1625280603156" />
+    <state width="957" height="286" key="GridCell.Tab.2.bottom" timestamp="1625280603157">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.2.bottom/0.0.1440.920@0.0.1440.920" timestamp="1625280603157" />
+    <state width="957" height="286" key="GridCell.Tab.2.center" timestamp="1625280603157">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.2.center/0.0.1440.920@0.0.1440.920" timestamp="1625280603157" />
+    <state width="957" height="286" key="GridCell.Tab.2.left" timestamp="1625280603156">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.2.left/0.0.1440.920@0.0.1440.920" timestamp="1625280603156" />
+    <state width="957" height="286" key="GridCell.Tab.2.right" timestamp="1625280603157">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.2.right/0.0.1440.920@0.0.1440.920" timestamp="1625280603157" />
+    <state width="957" height="286" key="GridCell.Tab.3.bottom" timestamp="1625279969707">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.3.bottom/0.0.1440.920@0.0.1440.920" timestamp="1625279969707" />
+    <state width="957" height="286" key="GridCell.Tab.3.center" timestamp="1625279969707">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.3.center/0.0.1440.920@0.0.1440.920" timestamp="1625279969707" />
+    <state width="957" height="286" key="GridCell.Tab.3.left" timestamp="1625279969707">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.3.left/0.0.1440.920@0.0.1440.920" timestamp="1625279969707" />
+    <state width="957" height="286" key="GridCell.Tab.3.right" timestamp="1625279969707">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="957" height="286" key="GridCell.Tab.3.right/0.0.1440.920@0.0.1440.920" timestamp="1625279969707" />
+    <state x="222" y="69" key="SettingsEditor" timestamp="1625118673321">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="222" y="69" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1625118673321" />
+    <state x="599" y="347" width="332" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1625148151862">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="599" y="347" width="332" height="249" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.920@0.0.1440.920" timestamp="1625148151862" />
+    <state x="231" y="120" key="com.intellij.database.dbimport.ImportDialog" timestamp="1625148129124">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="231" y="120" key="com.intellij.database.dbimport.ImportDialog/0.0.1440.920@0.0.1440.920" timestamp="1625148129124" />
+    <state x="451" y="265" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1625148395713">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="451" y="265" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1440.920@0.0.1440.920" timestamp="1625148395713" />
+    <state x="535" y="278" width="370" height="363" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1625147674491">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="535" y="278" width="370" height="363" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1440.920@0.0.1440.920" timestamp="1625147674491" />
+    <state x="368" y="93" width="819" height="694" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1625148030780">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="368" y="93" width="819" height="694" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.920@0.0.1440.920" timestamp="1625148030780" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1625280570278">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1625280570278" />
+  </component>
+</project>

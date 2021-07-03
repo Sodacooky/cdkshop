@@ -14,7 +14,7 @@ public class GameSearcher {
 	// 精确匹配
 	// page页，0为首页首8个结果
 	// val设为%即可列出全部
-	public static List<Game> search(String val, String col, int page, Connection con)
+	public static List<Game> search(String val, String col, int page, Connection con) //id 、cacetory
 			throws SQLException {
 		// do query
 		PreparedStatement stm =
