@@ -22,21 +22,21 @@ import java.util.List;
 				}
 		}
 
-		//添加随机条
-		private void __addSomeTo(String game_id, Connection con) {
-				try {
-						PreparedStatement stm = con.prepareStatement("insert into stock values(?,?);");
-						int rand_amount = (int) (1 + Math.random() * 8);
-						for (int i = 0; i != rand_amount; i++) {
-								stm.setString(1, __randomKey());
-								stm.setString(2, game_id);
-								stm.executeUpdate();
-						}
-						stm.close();
-				} catch (SQLException throwables) {
-						throwables.printStackTrace();
-				}
-		}
+    //添加随机条`
+    private void __addSomeTo(String game_id, Connection con) {
+        try {
+            PreparedStatement stm = con.prepareStatement("insert into stock values(?,?);");
+            int rand_amount = (int) (1 + Math.random() * 8);
+            for (int i = 0; i != rand_amount; i++) {
+                stm.setString(1, __randomKey());
+                stm.setString(2, game_id);
+                stm.executeUpdate();
+            }
+            stm.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 
 		//获取已存在游戏ID列表
 		private List<String> __fetchExistGame(Connection con) {
