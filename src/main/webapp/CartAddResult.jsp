@@ -38,7 +38,9 @@
     </div>
     <% } %>
 
-    <button type="button" class="btn btn-warning btn-block" onclick="window.history.back()">点击返回</button>
+    <button type="button" class="btn btn-success btn-block" onclick="window.history.back()">点击返回之前页面</button>
+    <button type="button" class="btn btn-success btn-block" onclick="window.location.href='CartPageServlet'">点击打开购物车
+    </button>
 </div>
 
 </body>

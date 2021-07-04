@@ -1,38 +1,48 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    if (session.getAttribute("logined") != null) {
+        request.getRequestDispatcher("Manager.jsp").forward(request, response);
+    }
+
+    String message = null;
+    if (request.getAttribute("message") != null) {
+        message = (String) request.getAttribute("message");
+    }
+%>
+
 <html>
 <head>
-    <title>后台登录</title>
+    <title>Electricity 后台</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <body>
 
-<div class="jumbotron">
-    <h2>欢迎来到Electricity网站后台！</h2>
-    <p>请登录</p>
-</div>
-<form class="form-horizontal" role="form" method="post" action="HoutaiServlet" margin="centre">
-    <div class="form-group" class="col-lg-3">
-        <label for="firstname" class="col-sm-2 control-label">用户名</label>
-        <div class="col-lg-5">
-            <input type="text" class="form-control" id="firstname" name="username"
-                   placeholder="请输入用户名">
+<div style="height: 32px"></div>
+
+<div class="container">
+
+        <% if (message != null) { %>
+    <div class="alert alert-danger" role="alert">
+        <%=message%>
+    </div>
+        <% } %>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form class="form-signin" action="ManagerLogin" method="post">
+                <h2 class="form-signin-heading">请进行身份验证</h2>
+                <input type="text" class="form-control" placeholder="用户名" name="username" value="admin" required=""
+                       autofocus="">
+                <input type="password" class="form-control" placeholder="密码" name="password" required="">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+            </form>
         </div>
     </div>
-    <div class="form-group" class="col-lg-3">
-        <label for="lastname" class="col-lg-2 control-label">密码</label>
-        <div class="col-lg-5">
-            <input type="text" class="form-control" id="lastname" name="password"
-                   placeholder="请输入密码">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-lg-offset-2 col-lg-10">
-            <button type="submit" class="btn btn-default">登录</button>
-        </div>
-    </div>
-</form>
+
 </body>
 </html>
 

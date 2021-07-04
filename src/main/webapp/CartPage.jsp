@@ -110,9 +110,11 @@
 
     <div style="height: 32px"></div>
 
-    <form action="BuyServlet" method="post">
+    <form action="PayServlet" method="post">
         <p style="font-size: 24px">总价:<span style="color: orange">￥<%=sum_price%></span></p>
+        <% if (sum_price > 0) { %>
         <button class="btn btn-warning" type="submit">支付</button>
+        <% } %>
         <p class="help-block">支付成功后请立刻复制您的CDK</p>
         <p class="help-block">点击支付按钮即表示您同意承担购买后CDK遗失的责任</p>
     </form>

@@ -28,6 +28,10 @@ public class Cart {
 				}
 		}
 
+		public void removeAll() {
+				m_mapContent.clear();
+		}
+
 		//此时查表将id转化为game对象
 		public Map<Game, Integer> getGameList(Connection con) {
 				Map<Game, Integer> game_list = new HashMap<>();
@@ -41,7 +45,7 @@ public class Cart {
 				}
 				return game_list;
 		}
-		
+
 		//content
 		//game_id -> amount
 		private Map<String, Integer> m_mapContent;
