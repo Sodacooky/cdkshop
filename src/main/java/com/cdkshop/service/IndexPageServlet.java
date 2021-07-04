@@ -1,7 +1,7 @@
 package com.cdkshop.service;
 
 import com.cdkshop.entity.Game;
-import com.cdkshop.service.db.KeyCounter;
+import com.cdkshop.service.db.KeyDataController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +30,7 @@ import java.util.List;
 						while (result.next()) {
 								Game game = new Game();
 								game.assignResult(result);
-								game.nStockAmount = KeyCounter.get(game.strId, con);
+								game.nStockAmount = KeyDataController.countAmount(game.strId, con);
 								list_game.add(game);
 						}
 						stm.close();

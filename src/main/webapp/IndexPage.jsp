@@ -126,7 +126,7 @@
 
 <hr>
 <p style="text-align: center">Electricity Team, 2021</p>
-<p style="text-align: center"><a href="LoginAuth.jsp">网站后台</a></p>
+<p style="text-align: center"><a href="ManagerLogin.jsp">网站后台</a></p>
 
 
 </body>

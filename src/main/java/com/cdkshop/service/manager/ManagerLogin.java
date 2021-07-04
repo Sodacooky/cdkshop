@@ -14,7 +14,7 @@ import java.util.Map;
 				Map<String, String[]> param = req.getParameterMap();
 				if (!param.containsKey("username") || !param.containsKey("password")) {
 						req.setAttribute("message", "非法访问");
-						req.getRequestDispatcher("LoginAuth.jsp").forward(req, resp);
+						req.getRequestDispatcher("ManagerLogin.jsp").forward(req, resp);
 				}
 				//简单鉴权
 				String user = param.get("username")[0];
@@ -24,7 +24,7 @@ import java.util.Map;
 						req.getRequestDispatcher("Manager.jsp").forward(req, resp);
 				} else {
 						req.setAttribute("message", "用户或密码错误");
-						req.getRequestDispatcher("LoginAuth.jsp").forward(req, resp);
+						req.getRequestDispatcher("ManagerLogin.jsp").forward(req, resp);
 				}
 		}
 }

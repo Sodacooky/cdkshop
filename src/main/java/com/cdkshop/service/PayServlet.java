@@ -3,8 +3,7 @@ package com.cdkshop.service;
 import com.cdkshop.entity.Cart;
 import com.cdkshop.entity.Game;
 import com.cdkshop.entity.Key;
-import com.cdkshop.service.db.KeyConsumer;
-import com.cdkshop.service.db.KeySearcher;
+import com.cdkshop.service.db.KeyDataController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -64,7 +63,7 @@ import java.util.concurrent.locks.ReentrantLock;
 				try {
 						for (int i = 0; i != amount; i++) {
 								Key tmp_key = null;
-								tmp_key = KeySearcher.search(game_id, i, con);
+								tmp_key = KeyDataController.get(game_id, i, con);
 								if (tmp_key == null) {
 										success = false;
 										break;
@@ -85,7 +84,9 @@ import java.util.concurrent.locks.ReentrantLock;
 		private void __consumeKeys(Map<String, List<String>> map, Connection con) {
 				for (Map.Entry<String, List<String>> entry : map.entrySet()) {
 						try {
-								KeyConsumer.consume(entry.getValue(), con);
+								if (KeyDataController.consume(entry.getValue(), con) != entry.getValue().size()) {
+										System.out.println("出现了非原子操作");
+								}
 						} catch (SQLException throwables) {
 								throwables.printStackTrace();
 						}

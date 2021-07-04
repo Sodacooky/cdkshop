@@ -1,7 +1,7 @@
 package com.cdkshop.service;
 
 import com.cdkshop.entity.Game;
-import com.cdkshop.service.db.GameSearcher;
+import com.cdkshop.service.db.GameDataController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,9 +34,9 @@ import java.util.Map;
 				List<Game> list_game = null;
 				int page_amount = 0;
 				try {
-						page_amount = GameSearcher.searchPageAmount(category_name, "category", con);
+						page_amount = GameDataController.searchListPageAmount(category_name, "category", con);
 						if (page_amount > 0) {
-								list_game = GameSearcher.search(category_name, "category", now_page - 1, con);
+								list_game = GameDataController.searchGetList(category_name, "category", now_page - 1, con);
 						}
 				} catch (SQLException e) {
 						e.printStackTrace();

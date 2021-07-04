@@ -1,6 +1,6 @@
 package com.cdkshop.entity;
 
-import com.cdkshop.service.db.GameSearcher;
+import com.cdkshop.service.db.GameDataController;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -37,7 +37,7 @@ public class Cart {
 				Map<Game, Integer> game_list = new HashMap<>();
 				for (Map.Entry<String, Integer> entry : m_mapContent.entrySet()) {
 						try {
-								Game game = GameSearcher.search(entry.getKey(), con);
+								Game game = GameDataController.searchGetOne(entry.getKey(), con);
 								game_list.put(game, entry.getValue());
 						} catch (SQLException throwables) {
 								throwables.printStackTrace();

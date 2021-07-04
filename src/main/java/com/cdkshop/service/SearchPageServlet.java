@@ -1,7 +1,7 @@
 package com.cdkshop.service;
 
 import com.cdkshop.entity.Game;
-import com.cdkshop.service.db.GameSearcher;
+import com.cdkshop.service.db.GameDataController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +18,7 @@ import java.util.Map;
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 				//get param
 				Connection con = (Connection) req.getServletContext().getAttribute("connect");
+				req.setCharacterEncoding("utf-8");
 				Map<String, String[]> param = req.getParameterMap();
 				String search_content = "null";
 				if (param.containsKey("search")) {
@@ -31,8 +32,8 @@ import java.util.Map;
 				int page_amount = 0;
 				List<Game> list_game = null;
 				try {
-						page_amount = GameSearcher.searchPageAmount(search_content, "name", con);
-						list_game = GameSearcher.search(search_content, "name", now_page - 1, con);
+						page_amount = GameDataController.searchListPageAmount(search_content, "name", con);
+						list_game = GameDataController.searchGetList(search_content, "name", now_page - 1, con);
 				} catch (SQLException e) {
 						e.printStackTrace();
 				}

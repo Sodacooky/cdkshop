@@ -10,9 +10,10 @@
         message = (String) request.getAttribute("message");
     }
 %>
-
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Electricity 后台</title>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -38,10 +39,13 @@
                 <input type="text" class="form-control" placeholder="用户名" name="username" value="admin" required=""
                        autofocus="">
                 <input type="password" class="form-control" placeholder="密码" name="password" required="">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+                <button class="btn btn-lg btn-default btn-block" type="submit">登录</button>
             </form>
         </div>
     </div>
+
+    <hr>
+    <p style="text-align: center"><a href="index.jsp">返回首页</a></p>
 
 </body>
 </html>

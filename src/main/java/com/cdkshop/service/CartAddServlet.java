@@ -1,7 +1,7 @@
 package com.cdkshop.service;
 
 import com.cdkshop.entity.Cart;
-import com.cdkshop.service.db.KeyCounter;
+import com.cdkshop.service.db.KeyDataController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,7 @@ import java.util.Map;
 				//check amount
 				int exist_amount = 0;
 				try {
-						exist_amount = KeyCounter.get(to_buy_id, con);
+						exist_amount = KeyDataController.countAmount(to_buy_id, con);
 				} catch (SQLException throwables) {
 						throwables.printStackTrace();
 				}
