@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Electricity CDK商城 主页</title>
+    <meta charset="UTF-8">
+    <title>Electricity CDK商城 购物车</title>
     <!-- JQuery, Bootstrap-->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -16,15 +14,14 @@
 <%@ page import="java.util.*" %>
 <%@ page import="com.cdkshop.entity.*" %>
 <%
-    List<Game> list_game = null;
-    if (request.getAttribute("list_game") != null) {
-        list_game = (List<Game>) request.getAttribute("list_game");
+    Map<Game, Integer> game_list = null;
+    if (request.getAttribute("game_list") != null) {
+        game_list = (Map<Game, Integer>) request.getAttribute("game_list");
     }
+    int sum_price = 0;
 %>
 
-
 <body>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -71,64 +68,57 @@
 <div style="height: 64px"></div>
 
 <div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>游戏ID</th>
+            <th>游戏名称</th>
+            <th>数量</th>
+            <th>小计</th>
+        </tr>
+        </thead>
 
-    <!-- Message From JSP -->
-    <div class="jumbotron">
-        <h2>
-            欢迎来到Electricity
-        </h2>
-        <p>
-            在这里你可以买到超低价的游戏激活CDK！看看下面这些最新上架的游戏吧！
-        </p>
-    </div>
-
-
-    <!-- Game List From JSP -->
-    <div class="row">
-        <%
-            if (list_game != null) {
-                for (Game g : list_game) {
+        <tbody>
+        <!-- JSP Print Row -->
+        <% if (game_list != null) {
+            for (Map.Entry<Game, Integer> pair : game_list.entrySet()) {
+                sum_price += pair.getValue() * pair.getKey().nPrice;
         %>
-        <div class="col-md-3">
-            <div class="thumbnail">
-                <img src="img/<%= g.strPicturePath %>" alt="" style="height: 142px">
-                <div class="caption">
-                    <h3><%= g.strShortName %>
-                    </h3>
-                    <p style="margin: 0;">
-                        <span style="color:orange;font-size:24px;vertical-align: middle;">￥<%= g.nPrice %></span>
-                        <span class="label label-default">库存: <%= g.nStockAmount %></span>
-                    <form action="CartAddServlet" method="post">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-addon">购买</span>
-                                <input type="number" class="form-control" name="amount" value="1"
-                                       aria-describedby="basic-addon2">
-                                <input type="hidden" name="id" value="<%= g.strId %>">
-                                <span class="input-group-addon" id="basic-addon2">份</span>
-                            </div>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-default">加入购物车</button>
-                        </div>
-                    </form>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <%
-                } //end for
-            } //end if
-        %>
-    </div><!-- end row -->
-</div><!-- end container -->
+        <tr>
+            <th scope="row">
+                <%=pair.getKey().strId%>
+            </th>
+            <td>
+                <%=pair.getKey().strName%>
+            </td>
+            <td>
+                <%=pair.getValue()%>
+            </td>
+            <td><span style="color: orange">￥<%=pair.getKey().nPrice * pair.getValue()%></span></td>
+            <td class="pull-right">
+                <form class="form-inline" action="CartRemoveServlet" method="post">
+                    <input type="hidden" name="id" value="<%=pair.getKey().strId%>">
+                    <button type="submit" class="btn btn-danger">删除</button>
+                </form>
+            </td>
+        </tr>
+        <% }
+        } %>
+        </tbody>
 
+    </table>
 
-<hr>
-<p style="text-align: center">Electricity Team, 2021</p>
-<p style="text-align: center"><a href="LoginAuth.jsp">网站后台</a></p>
+    <div style="height: 32px"></div>
 
+    <form action="BuyServlet" method="post">
+        <p style="font-size: 24px">总价:<span style="color: orange">￥<%=sum_price%></span></p>
+        <button class="btn btn-warning" type="submit">支付</button>
+        <p class="help-block">支付成功后请立刻复制您的CDK</p>
+        <p class="help-block">点击支付按钮即表示您同意承担购买后CDK遗失的责任</p>
+    </form>
+
+</div>
 
 </body>
-
 </html>
+

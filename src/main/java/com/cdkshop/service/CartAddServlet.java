@@ -11,13 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Map;
 
-@WebServlet("/BuyServlet") public class BuyServlet extends HttpServlet {
+@WebServlet("/CartAddServlet") public class CartAddServlet extends HttpServlet {
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-				String to_buy_id = req.getParameter("id");
-				int to_buy_amount = Integer.parseInt(req.getParameter("amount"));
 				Connection con = (Connection) req.getServletContext().getAttribute("connect");
-
+				Map<String, String[]> param = req.getParameterMap();
+				String to_buy_id = "null";
+				if (param.containsKey("id")) {
+						to_buy_id = param.get("id")[0];
+				}
+				int to_buy_amount = 0;
+				if (param.containsKey("amount")) {
+						to_buy_amount = Integer.parseInt(param.get("amount")[0]);
+				}
 				//check amount
 				int exist_amount = 0;
 				try {
@@ -35,6 +42,6 @@ import java.sql.SQLException;
 						req.setAttribute("success", true);
 						req.setAttribute("message", "加入购物车成功");
 				}
-				req.getRequestDispatcher("BuyResult.jsp").forward(req, resp);
+				req.getRequestDispatcher("CartAddResult.jsp").forward(req, resp);
 		}
 }

@@ -30,7 +30,7 @@ import java.util.List;
 						while (result.next()) {
 								Game game = new Game();
 								game.assignResult(result);
-								game.nAmount = KeyCounter.get(game.strId, con);
+								game.nStockAmount = KeyCounter.get(game.strId, con);
 								list_game.add(game);
 						}
 						stm.close();

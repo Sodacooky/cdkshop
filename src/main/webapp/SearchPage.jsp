@@ -7,8 +7,7 @@
     <meta charset="utf-8">
     <title>Electricity CDK商城 搜索</title>
     <!-- JQuery, Bootstrap-->
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -62,7 +61,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.jsp">首页</a></li>
-                <li><a href="CartPage">我的购物车</a></li>
+                <li><a href="CartPageServlet">我的购物车</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-haspopup="true"
@@ -118,8 +117,8 @@
                     </h3>
                     <p style="margin: 0;">
                         <span style="color:orange;font-size:24px;vertical-align: middle;">￥<%= g.nPrice %></span>
-                        <span class="label label-default">库存: <%= g.nAmount %></span>
-                    <form action="BuyServlet" method="post">
+                        <span class="label label-default">库存: <%= g.nStockAmount %></span>
+                    <form action="CartAddServlet" method="post">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">购买</span>

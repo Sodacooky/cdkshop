@@ -11,7 +11,6 @@ public class Game {
 				strCategory = "null";
 				nPrice = -1;
 				strPicturePath = "null";
-				nAmount = 0;
 		}
 
 		// 注入数据库查询结果
@@ -26,11 +25,12 @@ public class Game {
 
 		public String strId;
 		public String strName;
-		public String strShortName;
 		public String strCategory;
 		public int nPrice;
 		public String strPicturePath;
-		public int nAmount;
+
+		public String strShortName;
+		public int nStockAmount;
 
 		private void __makeShortName() {
 				StringBuilder sb = new StringBuilder();
