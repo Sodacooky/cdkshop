@@ -99,7 +99,7 @@
                     <p style="margin: 0;">
                         <span style="color:orange;font-size:24px;vertical-align: middle;">￥<%= g.nPrice %></span>
                         <span class="label label-default">库存: <%= g.nAmount %></span>
-                    <form>
+                    <form action="BuyServlet" method="post">
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">购买</span>
@@ -127,7 +127,7 @@
 
 <hr>
 <p style="text-align: center">Electricity Team, 2021</p>
-<p style="text-align: center"><a href="">网站后台</a></p>
+<p style="text-align: center"><a href="LoginAuth.jsp">网站后台</a></p>
 
 
 </body>
