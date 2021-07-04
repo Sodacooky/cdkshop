@@ -50,6 +50,7 @@ import java.util.concurrent.locks.ReentrantLock;
 						__consumeKeys(cdk_list, con);
 						req.setAttribute("message", "购买完成！");
 						req.setAttribute("cdk_list", cdk_list);
+						cart.removeAll();
 				}
 
 				lock.unlock();

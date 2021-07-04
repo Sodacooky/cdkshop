@@ -51,13 +51,13 @@
         </tr>
         </thead>
         <tbody>
+        <% for (String key : entry.getValue()) { %>
         <tr>
-            <% for (String key : entry.getValue()) { %>
             <td>
                 <%=key%>
             </td>
-            <% } %>
         </tr>
+        <% } %>
         </tbody>
     </table>
     <%
