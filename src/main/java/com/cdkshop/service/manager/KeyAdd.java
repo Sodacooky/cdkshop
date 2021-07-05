@@ -37,7 +37,7 @@ import java.util.Map;
 						req.setAttribute("message", "添加CDK失败，数据库错误");
 				} else {
 						req.setAttribute("success", true);
-						req.setAttribute("message", "添加CDK失败成功");
+						req.setAttribute("message", "添加CDK成功");
 				}
 				req.getRequestDispatcher("Manager.jsp").forward(req, resp);
 		}
