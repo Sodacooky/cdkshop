@@ -36,6 +36,7 @@ import java.util.concurrent.locks.ReentrantLock;
 						if (keys == null) {
 								//不成功立刻放弃并设置失败消息
 								success = false;
+								req.setAttribute("success", false);
 								req.setAttribute("message", "购买失败，" + entry.getKey().strName + "的库存已经不足");
 						} else {
 								//成功则推入Map
@@ -47,6 +48,7 @@ import java.util.concurrent.locks.ReentrantLock;
 						//不成功立刻跳转
 						//成功则把CDK从数据库中删除
 						__consumeKeys(cdk_list, con);
+						req.setAttribute("success", true);
 						req.setAttribute("message", "购买完成！");
 						req.setAttribute("cdk_list", cdk_list);
 						cart.removeAll();

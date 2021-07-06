@@ -22,6 +22,10 @@
     if (request.getAttribute("message") != null) {
         message = (String) request.getAttribute("message");
     }
+    boolean success = false;
+    if (request.getAttribute("success") != null) {
+        success = (boolean) request.getAttribute("success");
+    }
 %>
 
 <body>
@@ -33,14 +37,25 @@
         <h2>
             <%=message%>
         </h2>
+        <%
+            if (success) {
+        %>
         <p>
             请注意立刻复制保存您的CDK。
         </p>
         <button class="btn btn-danger" onclick="window.location.href='index.jsp'">返回首页</button>
+        <% } else { %>
+        </h2>
+        <p>
+            请刷新网站后重试。
+        </p>
+        <button class="btn btn-default" onclick="window.location.href='index.jsp'">返回首页</button>
+        <% } %>
     </div>
 
     <%
-        for (Map.Entry<String, List<String>> entry : cdk_list.entrySet()) {
+        if (success) {
+            for (Map.Entry<String, List<String>> entry : cdk_list.entrySet()) {
     %>
     <div style="height: 32px"></div>
     <table class="table table-condensed">
@@ -62,7 +77,8 @@
         </tbody>
     </table>
     <%
-        }//end for map
+            }//end for map
+        }//end if success
     %>
 
 </div>

@@ -19,6 +19,7 @@ import java.io.IOException;
 						path.mkdir();
 				}
 				//写入文件
+				req.setCharacterEncoding("utf-8");
 				Part img = req.getPart("file");
 				String filePath = path.getPath() + File.separator + img.getSubmittedFileName();
 				img.write(filePath);
